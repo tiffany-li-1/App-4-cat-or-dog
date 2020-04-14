@@ -17,17 +17,16 @@ Timothy Riedel
 triedel@utexas.edu
 
 Brief Description of Goal of Code:
-Find our whether you should get a cat or dog
+Find our whether you should get a dog ot cat!
 
 Known Issues:
-It might not be compeletely accurate. You need to be prepared to take care of anything.
-
+It might not be compeletely accurate. You need to be fully prepared for anything if you want a pet.
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
 
 <head>
-  <title>Cold or Allergies?</title>
+  <title>Cat or Dog?</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="stylesheet" href="w3.css">
@@ -63,7 +62,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </script>
 
 
-
+<!-- .body formats the body and .page formats the page. I also included an image section to make my resizable image-->
 <style>
 .body {
      margin: 0em;
@@ -83,12 +82,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
   .page:target {
     left: 0vw;
     z-index: 1;
-       	img, object{
-            	max-height:90%;
-        		max-width:90%;
 
+}
 
-          }
+img, object{
+    max-height:90%;
+    max-width:90%;
 }
 </style>
 
@@ -100,7 +99,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <div id="content" class="w3-container">
-  <img src="cute kitty.jpg" alt="Cute Kitten">
+  <img src="cute kitty.jpg" alt="Cute Kitten"><!-- is this the picture of the cat I want to include-->
 	<p>Are you thinking about getting a pet? Answer a few short questions to find out if you should get a cat or dog!</p> <!-- I changed the question to fit my app purpose-->
 
   	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started</a>
@@ -118,8 +117,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 	<div id="content" class="w3-container">
   	<p>Do you like going outside and walking?</p> <!-- this is where the questions goes in each page-->
-    <a href="#two"  onclick="catAdd();" class="w3-btn w3-black">No</a> <!--Yes means that it might be an allergy-->
-    <a href="#two"  onclick="dogAdd();" class="w3-btn w3-black">Yes</a> <!--No means it most likely is a cold-->
+    <a href="#two"  onclick="catAdd();" class="w3-btn w3-black">No</a> <!--Yes means that it might be an cat-->
+    <a href="#two"  onclick="dogAdd();" class="w3-btn w3-black">Yes</a> <!--No means it most likely is a dog-->
  	</div>
 </div>
 
@@ -228,7 +227,7 @@ correctly-->
 		function showResult(){
 			catPercent = cat_count / (total_catCount+total_dogCount); /*these 2 lines below counted
 			the totals after all the questions were done so the math was right and there were no logical errors, for example
-			the total for cold and allergies not adding up to 1*/
+			the total for dog and cat not adding up to 1*/
 
 			dogPercent = dog_count / (total_catCount+total_dogCount);
 		var resultText = document.getElementById("results");
